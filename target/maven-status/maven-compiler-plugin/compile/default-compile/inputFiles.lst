@@ -11,9 +11,9 @@ D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebServic
 D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\config\JwtTokenFilter.java
 D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\config\JwtTokenProvider.java
 D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\model\repository\UserRepository.java
+D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\resource\TestResource.java
 D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\config\JwtTokenConfigurer.java
 D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\model\User.java
-D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\resource\HelloWorldResource.java
 D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\model\Role.java
 D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\service\impl\EnchereServiceImpl.java
 D:\Semestre 5\Mr Rojo\Cloud\AuctionSale-Cloud-S5-P14\AuctionSale-Cloud-WebService\src\main\java\com\itu\auctionSale\service\impl\RoleServiceImpl.java

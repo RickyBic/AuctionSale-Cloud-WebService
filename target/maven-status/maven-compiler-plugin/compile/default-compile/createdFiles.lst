@@ -11,11 +11,11 @@ com\itu\auctionSale\model\repository\RoleRepository.class
 com\itu\auctionSale\service\impl\UserDetailsServiceImpl.class
 com\itu\auctionSale\model\repository\EnchereRepository.class
 com\itu\auctionSale\service\IPageService.class
-com\itu\auctionSale\resource\HelloWorldResource.class
 com\itu\auctionSale\model\Role.class
 com\itu\auctionSale\resource\impl\UserResourceImpl.class
 com\itu\auctionSale\model\repository\UserRepository.class
 com\itu\auctionSale\service\IService.class
+com\itu\auctionSale\resource\TestResource.class
 com\itu\auctionSale\service\IRoleService.class
 com\itu\auctionSale\model\Enchere.class
 com\itu\auctionSale\resource\impl\CategorieResourceImpl.class
