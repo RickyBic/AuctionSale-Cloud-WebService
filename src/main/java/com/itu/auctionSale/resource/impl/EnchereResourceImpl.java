@@ -18,11 +18,13 @@ import com.itu.auctionSale.model.Enchere;
 import com.itu.auctionSale.resource.Resource;
 import com.itu.auctionSale.service.IPageService;
 import com.itu.auctionSale.service.IService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 /**
  *
  * @author RickyBic
  */
+@CrossOrigin("*") // to allow from all domains
 @RestController
 @RequestMapping("/encheres")
 public class EnchereResourceImpl implements Resource<Enchere> {
