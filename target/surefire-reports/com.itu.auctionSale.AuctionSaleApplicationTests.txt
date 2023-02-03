@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.itu.auctionSale.AuctionSaleApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.223 s - in com.itu.auctionSale.AuctionSaleApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.539 s - in com.itu.auctionSale.AuctionSaleApplicationTests
