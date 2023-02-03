@@ -35,9 +35,9 @@ public class AuctionSaleApplication implements CommandLineRunner {
             User user1 = new User();
             user1.setName("User");
             user1.setEmail("user@gmail.com");
-            user1.setMobile("0349472576");
+            user1.setMobile("0325844569");
             user1.setPassword(new BCryptPasswordEncoder().encode("testuser"));
-            user1.setSoldecompte(0.0);
+            user1.setSoldecompte(20000000.0);
             user1.setRole(roleService.findByName(ConstantUtils.USER.toString()));
             userService.saveOrUpdate(user1);
 
