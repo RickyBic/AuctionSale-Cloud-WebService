@@ -57,9 +57,9 @@ public class OffreService {
             return null;
         }
         User user = userRepository.findByEmail(email);
-        /*if (offre.getPrix() > user.getSoldecompte()) {
+        if (offre.getPrix() > user.getSoldecompte()) {
             return null;
-        }*/
+        }
         List<Offre> lo = offreRepository.findAllOffresByEnchere(enchere_id);
         if (!lo.isEmpty()) {
             Offre offremax = Fonctions.getOffreMax(lo);

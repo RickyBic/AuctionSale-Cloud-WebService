@@ -108,6 +108,9 @@ public class EnchereService {
                 Offre offreMax = Fonctions.getOffreMax(lo);
                 offreMax.setStatut("Adjugée");
                 offreRepository.saveAndFlush(offreMax);
+                User user = offreMax.getUser();
+                user.setSoldecompte(user.getSoldecompte() - offreMax.getPrix());
+                userRepository.saveAndFlush(user);
             }
         }
     }
