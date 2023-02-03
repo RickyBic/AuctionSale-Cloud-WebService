@@ -10,6 +10,7 @@ import com.itu.auctionSale.model.Offre;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -30,7 +31,7 @@ public class Fonctions {
     public static boolean isEnchereFin(Enchere e) {
         boolean fin = false;
         try {
-            Date datenow = new Date();
+            Date datenow = new Date(new Date().getTime() + TimeUnit.HOURS.toMillis(3)); // UTC+3
             Date datefin = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(e.getDatefin());
             if (datenow.compareTo(datefin) >= 0) {
                 fin = true;

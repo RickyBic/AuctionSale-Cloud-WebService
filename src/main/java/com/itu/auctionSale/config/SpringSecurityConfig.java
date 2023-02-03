@@ -43,8 +43,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors();
-        http.csrf().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests().antMatchers("/user/*", "/encheres/collection").permitAll().anyRequest().authenticated();
+        http.csrf().disable();
         http.apply(new JwtTokenConfigurer(tokenProvider));
     }
 

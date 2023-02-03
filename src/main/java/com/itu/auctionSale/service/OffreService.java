@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,7 +70,8 @@ public class OffreService {
         }
         offre.setEnchere(enchere.get());
         offre.setUser(user);
-        offre.setDate(new SimpleDateFormat("dd/MM/yyy HH:mm").format(new Date()));
+        Date datenow = new Date(new Date().getTime() + TimeUnit.HOURS.toMillis(3)); // UTC+3
+        offre.setDate(new SimpleDateFormat("dd/MM/yyy HH:mm").format(datenow));
         offre.setStatut("Non adjugée");
         return offreRepository.saveAndFlush(offre);
     }

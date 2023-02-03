@@ -25,6 +25,7 @@ import com.itu.auctionSale.utils.Fonctions;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -77,7 +78,8 @@ public class EnchereService {
         Optional<User> user = userRepository.findById(user_id);
         Optional<Categorie> categorie = categorieRepository.findById(categorie_id);
         enchere.setUser(user.get());
-        enchere.setDatedebut(new SimpleDateFormat("dd/MM/yyy HH:mm").format(new Date()));
+        Date datenow = new Date(new Date().getTime() + TimeUnit.HOURS.toMillis(3)); // UTC+3
+        enchere.setDatedebut(new SimpleDateFormat("dd/MM/yyy HH:mm").format(datenow));
         enchere.setCategorie(categorie.get());
         enchere.setStatut("En cours");
         return enchereRepository.saveAndFlush(enchere);
