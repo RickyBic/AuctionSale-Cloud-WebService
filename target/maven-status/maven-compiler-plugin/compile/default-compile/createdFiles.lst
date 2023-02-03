@@ -23,4 +23,5 @@ com\itu\auctionSale\config\JwtTokenProvider.class
 com\itu\auctionSale\service\UserService.class
 com\itu\auctionSale\config\JwtTokenConfigurer.class
 com\itu\auctionSale\AuctionSaleApplication.class
+com\itu\auctionSale\utils\Fonctions.class
 com\itu\auctionSale\utils\ConstantUtils.class
