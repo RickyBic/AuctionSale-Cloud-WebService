@@ -80,8 +80,8 @@ public class EnchereResource {
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<Enchere> save(@RequestBody Enchere enchere, @QueryParam("user_id") Long user_id, @QueryParam("categorie_id") Long categorie_id) {
-        return new ResponseEntity<>(enchereService.save(enchere, user_id, categorie_id), HttpStatus.CREATED);
+    public ResponseEntity<Enchere> save(@RequestBody Enchere enchere, @QueryParam("email") String email, @QueryParam("categorie_id") Long categorie_id) {
+        return new ResponseEntity<>(enchereService.save(enchere, email, categorie_id), HttpStatus.CREATED);
     }
 
     @PutMapping(consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)

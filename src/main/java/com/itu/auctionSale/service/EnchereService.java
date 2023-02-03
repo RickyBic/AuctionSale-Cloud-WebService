@@ -74,10 +74,10 @@ public class EnchereService {
      * @param categorie_id
      * @return
      */
-    public Enchere save(Enchere enchere, Long user_id, Long categorie_id) {
-        Optional<User> user = userRepository.findById(user_id);
+    public Enchere save(Enchere enchere, String email, Long categorie_id) {
+        User user = userRepository.findByEmail(email);
         Optional<Categorie> categorie = categorieRepository.findById(categorie_id);
-        enchere.setUser(user.get());
+        enchere.setUser(user);
         Date datenow = new Date(new Date().getTime() + TimeUnit.HOURS.toMillis(3)); // UTC+3
         enchere.setDatedebut(new SimpleDateFormat("dd/MM/yyy HH:mm").format(datenow));
         enchere.setCategorie(categorie.get());
