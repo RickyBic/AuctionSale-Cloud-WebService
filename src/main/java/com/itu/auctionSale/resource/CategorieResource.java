@@ -7,6 +7,7 @@ package com.itu.auctionSale.resource;
 
 import com.itu.auctionSale.model.Categorie;
 import com.itu.auctionSale.service.CategorieService;
+import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -35,6 +36,11 @@ public class CategorieResource {
 
     @Autowired
     private CategorieService categorieService;
+
+    @GetMapping("/collection")
+    public ResponseEntity<Collection<Categorie>> findAll() {
+        return new ResponseEntity<>(categorieService.findAll(), HttpStatus.OK);
+    }
 
     @GetMapping
     public ResponseEntity<Page<Categorie>> findAll(int pageNumber, int pageSize, String sortBy, String sortDir) {
