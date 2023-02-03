@@ -2,8 +2,8 @@ package com.itu.auctionSale;
 
 import com.itu.auctionSale.model.Role;
 import com.itu.auctionSale.model.User;
-import com.itu.auctionSale.service.IRoleService;
-import com.itu.auctionSale.service.IService;
+import com.itu.auctionSale.service.RoleService;
+import com.itu.auctionSale.service.UserService;
 import com.itu.auctionSale.utils.ConstantUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,10 +15,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class AuctionSaleApplication implements CommandLineRunner {
 
     @Autowired
-    private IService<User> userService;
+    private UserService userService;
 
     @Autowired
-    private IRoleService<Role> roleService;
+    private RoleService roleService;
 
     public static void main(String[] args) {
         SpringApplication.run(AuctionSaleApplication.class, args);

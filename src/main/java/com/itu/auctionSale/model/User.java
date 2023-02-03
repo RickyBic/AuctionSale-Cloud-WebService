@@ -51,6 +51,9 @@ public class User {
     @OneToMany(targetEntity = Enchere.class, mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Enchere> encheres;
 
+    @OneToMany(targetEntity = Offre.class, mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<Offre> offres;
+
     public Long getId() {
         return id;
     }

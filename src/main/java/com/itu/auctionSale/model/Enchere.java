@@ -5,14 +5,16 @@
  */
 package com.itu.auctionSale.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import java.util.Date;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -31,9 +33,8 @@ public class Enchere {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(nullable = false)
-    private Date datedebut;
+    private String datedebut;
 
     @Column(nullable = false)
     private String description;
@@ -43,17 +44,19 @@ public class Enchere {
     private Categorie categorie;
 
     @Column(nullable = false)
-    private Double prixdepart;
+    private Float prixdepart;
 
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(nullable = false)
-    private Date datefin;
+    private String datefin;
 
     @Column(nullable = false)
     private String statut;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String urlphotos;
+
+    @OneToMany(targetEntity = Offre.class, mappedBy = "enchere", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<Offre> offres;
 
     public Long getId() {
         return id;
@@ -71,11 +74,11 @@ public class Enchere {
         this.user = user;
     }
 
-    public Date getDatedebut() {
+    public String getDatedebut() {
         return datedebut;
     }
 
-    public void setDatedebut(Date datedebut) {
+    public void setDatedebut(String datedebut) {
         this.datedebut = datedebut;
     }
 
@@ -95,19 +98,19 @@ public class Enchere {
         this.categorie = categorie;
     }
 
-    public Double getPrixdepart() {
+    public Float getPrixdepart() {
         return prixdepart;
     }
 
-    public void setPrixdepart(Double prixdepart) {
+    public void setPrixdepart(Float prixdepart) {
         this.prixdepart = prixdepart;
     }
 
-    public Date getDatefin() {
+    public String getDatefin() {
         return datefin;
     }
 
-    public void setDatefin(Date datefin) {
+    public void setDatefin(String datefin) {
         this.datefin = datefin;
     }
 
